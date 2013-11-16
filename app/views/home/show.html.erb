@@ -1,2 +1,52 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+
+<div class='home-show'>
+
+<header class='with-margins'>
+	<img src='<%= asset_path 'logo-large.png' %>' />
+	<h1><span>Corp</span>Connect</h1>
+	<p>Find your place in the Peace Corps</p>
+	<p class='login'>Existing user? <a href='#login' class='login-button'>Login</a></p>
+
+	<div class='login-form hide'>
+		<%= form_for(resource, :as => resource_name, :url => new_user_session_path) do |f| %>
+			<div><%= f.label :email %>
+			<%= f.email_field :email, :autofocus => true %></div>
+
+			<div><%= f.label :password %>
+			<%= f.password_field :password %></div>
+
+			<div><%= f.submit "Sign in" %></div>
+		<% end %>
+	</div>
+</header>
+
+<section class='start-here'>
+	<div class='with-margins questionnaire-prompt'>
+		<h2>Ready to explore specific opportunities?</h2>
+		<a href='#start' class='questionnaire-button'>Start here.</a>
+	</div>
+
+	<div class='questionnaire hide'>
+		<div class='progress'>
+			<div class='circle approved'></div><div class='line'></div>
+			<div class='circle current'></div><div class='line'></div>
+			<div class='circle'></div><div class='line'></div>
+			<div class='circle'></div><div class='line'></div>
+			<div class='circle'></div>
+
+			<div class='content'>
+				<p class='main'>I would like to commit to serving abroad for 27 months.</p>
+				<p class='sub'>I am willing to prepare my professional and personal life to make this commitment</p>
+
+				<a href='#yes' class='yes-button'>Yes</a>
+				<a href='#yes' class='no-button'>No, thanks</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class='addendum with-margins'>
+	<p>This landing page is a great place for some appealing photos, icons, and descriptions of the Peace Corps.</p>
+</section>
+
+</div><!-- .home-show -->

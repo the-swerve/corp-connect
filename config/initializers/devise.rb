@@ -6,6 +6,11 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   config.secret_key = '54b1933879f2bbdbfee2d9c8ef6dace76362fca9747dc5490ebfd21699eb2ed3091cbb2a6a229e542d3d55e6566ddcf8bf9f32f5bbecf0f7ee53ca766f83d18b'
 
+	# login failure redirect
+	config.warden do |manager|
+		manager.failure_app = CustomFailure
+	end
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

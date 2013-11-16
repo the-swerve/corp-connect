@@ -12,5 +12,7 @@ class User < ActiveRecord::Base
 		:first_name,
 		:last_name,
 		:dob,
-		:mission_statement
+		:mission_statement,
+		:volunteer,
+		:recruiter
 end

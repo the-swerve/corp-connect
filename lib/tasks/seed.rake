@@ -28,4 +28,25 @@ namespace :seed do
 		Interest.all.map(&:destroy)
 		Category.all.map(&:destroy)
 	end
+
+	desc "Generate sample volunteer and recruiter"
+	task :demo_users => :environment do
+		User.create({
+			first_name: 'Jay',
+			last_name: 'Bolton',
+			email: 'volunteer@demo.com',
+			password: 'password',
+			password_confirmation: 'password',
+			volunteer: true
+		})
+
+		User.create({
+			first_name: 'Bob',
+			last_name: 'Ross',
+			email: 'recruiter@demo.com',
+			password: 'password',
+			password_confirmation: 'password',
+			recruiter: true
+		})
+	end
 end
