@@ -11,3 +11,421 @@ Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-16 09:16:21 -0800
 Served asset /rails.png - 200 OK (2ms)
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-16 09:34:51 -0800
+Served asset /rails.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-16 09:34:59 -0800
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.7ms)
+Compiled home.css  (78ms)  (pid 28571)
+Compiled application.css  (92ms)  (pid 28571)
+Compiled jquery.js  (3ms)  (pid 28571)
+Compiled jquery_ujs.js  (0ms)  (pid 28571)
+Compiled home.js  (390ms)  (pid 28571)
+Compiled application.js  (403ms)  (pid 28571)
+Completed 200 OK in 517ms (Views: 516.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-16 09:35:00 -0800
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-16 09:35:00 -0800
+Served asset /home.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-16 09:35:00 -0800
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-16 09:35:00 -0800
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-16 09:35:00 -0800
+Served asset /home.js - 200 OK (23ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-16 09:35:00 -0800
+Served asset /application.js - 200 OK (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (15.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (42.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131116174400)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (75.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (32.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (43.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131116174400')
+  [1m[36m (14.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131116174400)
+Migrating to CreateOpportunities (20131116174946)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (66.3ms)[0m  [1mCREATE TABLE "opportunities" ("id" serial primary key, "name" character varying(255), "body" text, "country" character varying(255), "area" character varying(255), "latitude" float, "longitude" float, "start_date" timestamp, "end_date" timestamp, "applicants" integer, "status" character varying(255), "recruiter_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131116174946')
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131116174400)
+Migrating to CreateOpportunities (20131116174946)
+Migrating to CreateSkills (20131116175246)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (114.2ms)[0m  [1mCREATE TABLE "skills" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131116175246')
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInterests (20131116175256)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (32.3ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131116175256')
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSkillMaps (20131116175325)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (32.5ms)[0m  [1mCREATE TABLE "skill_maps" ("id" serial primary key, "skill_id" integer, "opportunity_id" integer, "volunteer_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131116175325')
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInterestMaps (20131116175336)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (32.8ms)[0m  [1mCREATE TABLE "interest_maps" ("id" serial primary key, "interest_id" integer, "opportunity_id" integer, "volunteer_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131116175336')
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-16 10:02:39 -0800
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Compiled opportunities.css  (1ms)  (pid 28571)
+Compiled scaffolds.css  (8ms)  (pid 28571)
+Compiled application.css  (107ms)  (pid 28571)
+Compiled opportunities.js  (84ms)  (pid 28571)
+Compiled application.js  (89ms)  (pid 28571)
+Completed 200 OK in 227ms (Views: 227.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-16 10:02:39 -0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-16 10:02:39 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/opportunities.css?body=1" for 127.0.0.1 at 2013-11-16 10:02:39 -0800
+Served asset /opportunities.css - 200 OK (33ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-16 10:02:40 -0800
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-16 10:02:40 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-16 10:02:40 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-16 10:02:40 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/opportunities.js?body=1" for 127.0.0.1 at 2013-11-16 10:02:40 -0800
+Served asset /opportunities.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-16 10:02:40 -0800
+Served asset /application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131116174400)
+Migrating to CreateOpportunities (20131116174946)
+Migrating to CreateSkills (20131116175246)
+Migrating to CreateInterests (20131116175256)
+Migrating to CreateSkillMaps (20131116175325)
+Migrating to CreateInterestMaps (20131116175336)
+Migrating to AddFieldsToUsers (20131116180603)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "first_name" character varying(255)[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "users" ADD COLUMN "last_name" character varying(255)
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD COLUMN "dob" character varying(255)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131116180603')
+  [1m[36m (76.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/opportunities.css?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /opportunities.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/opportunities.js?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /opportunities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-16 10:12:44 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131116174400)
+Migrating to CreateOpportunities (20131116174946)
+Migrating to CreateSkills (20131116175246)
+Migrating to CreateInterests (20131116175256)
+Migrating to CreateSkillMaps (20131116175325)
+Migrating to CreateInterestMaps (20131116175336)
+Migrating to AddFieldsToUsers (20131116180603)
+Migrating to CreateCategories (20131116181815)
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (104.8ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131116181815')
+  [1m[36m (8.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (129.0ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Agriculture"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (52.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Forestry"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (8.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "TESL/TEFL"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Spanish Language"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (9.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "French Language"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Teaching"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (9.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Bachelor's Degree"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Accounting"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (9.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Computer Software"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Education"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (13.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Health"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Youth & Community Development"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (9.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Business Development"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Agriculture"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (9.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Environment"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Education"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (13.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Health & HIV/AIDS"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Youth & Community Development"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (9.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Business and Information & Communication Technology"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Agriculture"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[35m (9.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00], ["name", "Environment"], ["updated_at", Sat, 16 Nov 2013 18:21:18 UTC +00:00]]
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mDELETE FROM "skills" WHERE "skills"."id" = $1[0m  [["id", 1]]
+  [1m[35m (77.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "skills" WHERE "skills"."id" = $1  [["id", 2]]
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "skills" WHERE "skills"."id" = $1[0m  [["id", 3]]
+  [1m[35m (10.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "skills" WHERE "skills"."id" = $1  [["id", 4]]
+  [1m[36m (10.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "skills" WHERE "skills"."id" = $1[0m  [["id", 5]]
+  [1m[35m (10.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "skills" WHERE "skills"."id" = $1  [["id", 6]]
+  [1m[36m (10.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "skills" WHERE "skills"."id" = $1[0m  [["id", 7]]
+  [1m[35m (10.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "skills" WHERE "skills"."id" = $1  [["id", 8]]
+  [1m[36m (10.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "skills" WHERE "skills"."id" = $1[0m  [["id", 9]]
+  [1m[35m (10.0ms)[0m  COMMIT
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT "interests".* FROM "interests" [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "interests" WHERE "interests"."id" = $1[0m  [["id", 1]]
+  [1m[35m (13.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "interests" WHERE "interests"."id" = $1  [["id", 2]]
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "interests" WHERE "interests"."id" = $1[0m  [["id", 3]]
+  [1m[35m (10.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "interests" WHERE "interests"."id" = $1  [["id", 4]]
+  [1m[36m (9.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "interests" WHERE "interests"."id" = $1[0m  [["id", 5]]
+  [1m[35m (9.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "interests" WHERE "interests"."id" = $1  [["id", 6]]
+  [1m[36m (10.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 1]]
+  [1m[36m (12.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 2]]
+  [1m[35m (9.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 3]]
+  [1m[36m (10.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 4]]
+  [1m[35m (10.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 5]]
+  [1m[36m (10.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 6]]
+  [1m[35m (9.8ms)[0m  COMMIT
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Agriculture"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (83.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Forestry"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "TESL/TEFL"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Spanish Language"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "French Language"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Teaching"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (9.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Bachelor's Degree"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (9.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Accounting"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (9.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "skills" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Computer Software"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Education"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (13.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Health"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (9.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Youth & Community Development"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (9.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Business Development"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Agriculture"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (9.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "interests" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Environment"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (9.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Education"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (13.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Health & HIV/AIDS"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (8.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Youth & Community Development"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (9.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Business and Information & Communication Technology"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (10.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Agriculture"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[35m (9.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00], ["name", "Environment"], ["updated_at", Sat, 16 Nov 2013 18:22:25 UTC +00:00]]
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m

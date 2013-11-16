@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  interest_id: 1
+  opportunity_id: 1
+  volunteer_id: 1
+
+two:
+  interest_id: 1
+  opportunity_id: 1
+  volunteer_id: 1

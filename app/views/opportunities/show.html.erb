@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @opportunity.name %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @opportunity.body %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @opportunity.country %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @opportunity.area %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @opportunity.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @opportunity.longitude %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @opportunity.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @opportunity.end_date %>
+</p>
+
+<p>
+  <b>Applicants:</b>
+  <%= @opportunity.applicants %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @opportunity.status %>
+</p>
+
+<p>
+  <b>Recruiter:</b>
+  <%= @opportunity.recruiter_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
+<%= link_to 'Back', opportunities_path %>
