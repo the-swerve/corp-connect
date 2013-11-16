@@ -1,0 +1,67 @@
+@import 'mixins';
+
+.opportunities-index {
+
+	iframe {
+		margin-bottom: 20px;
+	}
+
+	.filters {
+		padding: 20px;
+		width: 260px;
+		display: inline-block;
+		min-height: 400px;
+		background-color: #eee;
+		float: left;
+	}
+
+	.results {
+		float: left;
+		width: 620px;
+		margin-left: 20px;
+		min-height: 400px;
+
+		.opportunity:nth-child(2n) {
+			background-color: #f8f8f8;
+		}
+
+		.opportunity {
+			margin-bottom: 40px;
+			padding: 12px;
+
+			.image {
+				@include border-radius(4px);
+				display: inline-block;
+				float: left;
+				background-color: #60b385;
+				width: 130px;
+				height: 130px;
+			}
+
+			.info {
+				width: 450px;
+				margin-left: 10px;
+
+				h3 {
+					margin: 0 0 12px 0;
+					font-weight: normal;
+				}
+			}
+
+			p {
+				margin: 0;
+
+				span {
+					display: inline-block;
+					width: 80px;
+					color: #666;
+					font-weight: bold;
+				}
+			}
+
+			.info {
+				display: inline-block;
+			}
+		} // .opportunity
+	} // .results
+} // .opportunities-index

@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
 		:mission_statement,
 		:volunteer,
 		:recruiter
+
+	def name
+		"#{self.first_name} #{self.last_name}"
+	end
 end

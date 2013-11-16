@@ -1,3 +1,4 @@
+@import 'mixins';
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -67,3 +68,41 @@ form {
 		text-align: left;
 	}
 } // form
+
+.navigation {
+	h1 {
+		display: inline-block;
+		color: #717171;
+
+		span {
+			color: #60b385;
+		}
+
+		div.img {
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			background-size: cover;
+			@include border-radius(15px);
+		}
+
+		img {
+			vertical-align: middle;
+		}
+	} // h1
+
+	a {
+		display: inline-block;
+		float: right;
+		line-height: 100px;
+
+		span {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			@include border-radius(15px);
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+	} // a
+} // .nav

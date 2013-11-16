@@ -5,6 +5,8 @@ interests = ["Education", "Health", "Youth & Community Development", "Business D
 
 categories = ["Education", "Health & HIV/AIDS", "Youth & Community Development", "Business and Information & Communication Technology", "Agriculture", "Environment"]
 
+countries = ["Dominica", "Belize", "Costa Rica", "Panama", "Jordan", "Morocco", "Botswana", "Burkina Faso", "Ghana", "Guinea"]
+
 namespace :seed do
 
 	desc "Generate all the default data"
@@ -48,5 +50,20 @@ namespace :seed do
 			password_confirmation: 'password',
 			recruiter: true
 		})
+	end
+
+	desc "Generate sample opportunities"
+	task :demo_ops => :environment do
+		10.times do
+			Opportunity.create({
+				:area => categories.sample,
+				:country => countries.sample,
+				:end_date => (33 + rand(3)).months.from_now,
+				:start_date => (6 + rand(3)).months.from_now,
+				:name => "Educate schoolchildren in Kenya about the causes and dangers of HIV/AIDS and disease prevention through storytelling",
+				:recruiter_id => User.where(:recruiter => true).last.id,
+				:status => "Accepting Applications"
+			})
+		end
 	end
 end
