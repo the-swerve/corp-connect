@@ -3,6 +3,8 @@
 
 *Find your place in the Peace Corps*
 
+http://corpconnect.herokuapp.com
+
 This application matches volunteers with worldwide opportunities.
 
 The goal is to provide enough filters and criteria for both volunteers and
